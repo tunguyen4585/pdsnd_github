@@ -30,6 +30,7 @@ def city_input():
     print('Chicago: 1')
     print('New York: 2')
     print('Washington: 3')
+    print('.....')
     print(' ')
     city = input('Please choose the city for which you would like to see the Statistics: ')
     city = city.lower()
@@ -46,6 +47,7 @@ def city_input():
             # error handled by implementing 'else' and provided another option to input data
             else:
                 print('\nPlease enter 1, 2 or 3 or the names of cities\n')
+                time.delay(1)
                 city = input('Please choose the city for which you would like to see the Statistics: ')
                 city = city.lower()
     return city
@@ -249,6 +251,7 @@ def bike_users(df):
     '''
      # df - dataframe returned from time_filters
     print('\n* Q8. Types of users: subscribers, customers, others\n')
+    print(df['User Type'].value_counts())
     return df['User Type'].value_counts()
 
 def gender_data(df):
