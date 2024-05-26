@@ -251,6 +251,7 @@ def bike_users(df):
     '''
      # df - dataframe returned from time_filters
     print('\n* Q8. Types of users: subscribers, customers, others\n')
+    print(df['User Type'].value_counts())
     return df['User Type'].value_counts()
 
 def gender_data(df):
